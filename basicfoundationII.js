@@ -92,8 +92,23 @@ function Increments(arr7){
 console.log(Increments([1,1,1,1]));
 
 //Previous Lengths - You are passed an array (similar to saying 'takes in an array' or 'given an array') containing strings.  Working within that same array, replace each string with a number - the length of the string at the previous array index - and return the array.  For example, previousLengths(["hello", "dojo", "awesome"]) should return ["hello", 5, 4]. Hint: Can for loops only go forward?
+function previousLengths(arr){
+    for (var i = arr.length-1; i > 0; i--){
+        arr[i] = arr[i-1].length;
+    }
+    return arr;
+}
+console.log(previousLengths(["dojo","hello", "awesome"]));
 
 //Add Seven - Build a function that accepts an array. Return a new array with all the values of the original, but add 7 to each. Do not alter the original array.  Example, addSeven([1,2,3]) should return [8,9,10] in a new array.
+function addSeven(arr8){
+    var newArr8 = [];
+    for (var i = 0; i < arr8.length; i++){
+        newArr8.push(arr8[i] + 7);
+    }
+    return newArr8;
+}
+console.log(addSeven([1,2,3]));
 
 //Reverse Array - Given an array, write a function that reverses its values, in-place.  Example: reverse([3,1,6,4,2]) returns the same array, but now contains values reversed like so... [2,4,6,1,3].  Do this without creating an empty temporary array.  (Hint: you'll need to swap values).
 
